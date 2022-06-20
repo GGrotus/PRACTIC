@@ -1,0 +1,102 @@
+HI-TECH Software 8051-C Compiler V9.60
+
+Linker command line:
+
+--edf=C:\PROGRA~2\HI-TEC~1\HC51\9.60\dat\en_msgs.txt \
+  -h+C:\Users\Pavlik\Desktop\5PRAKT~1\541C0~1\_uc6043f0440043e0435043a04425.sym \
+  -z -Q8051AH -ol.obj \
+  -MC:\Users\Pavlik\Desktop\5PRAKT~1\541C0~1\_uc6043f0440043e0435043a04425.map \
+  -E1 -ver=8051-C#V9.60 -ACODE=00h-0FFFh -pvectors=00h \
+  -prbit=0/20h,rbss,rdata/CODE,irdata/CODE,idata/rbss -pbss=XDATA/idata \
+  -pdata=CODE+100h -pconst=CODE+100h -pstrings=CODE+100h -pnvram=bss,heap \
+  C:\Users\Pavlik\AppData\Local\Temp\saq8.obj \
+  C:\Users\Pavlik\Desktop\5PRAKT~1\541C0~1\main_0.obj \
+  C:\PROGRA~2\HI-TEC~1\HC51\9.60\lib\51--nsc.lib 
+
+Object code version is 3.8
+
+Machine type is 8051AH
+
+Call graph:
+
+*start1 size 0,0 offset 0
+*    _main size 0,29 offset 0
+
+		Name          Link     Load   Length Selector Space Scale
+C:\Users\Pavlik\AppData\Local\Temp\saq8.obj
+		vectors          0        0        3       0     0
+		text            E1       E1       14       0     0
+C:\Users\Pavlik\Desktop\5PRAKT~1\541C0~1\main_0.obj
+		data           100      100        F     100     0
+		text           10F      10F      325     100     0
+
+C:\PROGRA~2\HI-TEC~1\HC51\9.60\lib\51--nsc.lib
+powerup.obj     text            F5       F5        3       0     0
+str_cops.obj    text           434      434       41     100     0
+mul.obj         text            C3       C3       1E       0     0
+div.obj         text             3        3       C0       0     0
+
+COMMON          rbss            20       20       1D      20     1
+
+TOTAL		Name          Link     Load   Length
+	CLASS	CODE     
+		vectors          0        0        3
+		data           100      100        F
+		text            E1       E1       14
+		text           10F      10F      325
+		text            F5       F5        3
+		text           434      434       41
+		text            C3       C3       1E
+		text             3        3       C0
+
+	CLASS	DATA     
+		rbss            20       20       1D
+
+	CLASS	XDATA    
+
+	CLASS	BITSEG   
+
+
+
+SEGMENTS	Name		Load	Length	 Top	Selector    Space Class
+
+		vectors         000000	0000F8	0000F8	       0       0  CODE    
+		rbit            000020	00001D	00003D	      20       1  BITSEG  
+		data            000100	000375	000475	     100       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+	CODE             0F8-0FF
+	                 475-FFF
+
+                                  Symbol Table
+
+?a_main        rbss    020  __Bbss         bss     03D
+__Bidata       idata   03D  __Birdata      irdata  003
+__Brbit        rbit    020  __Brdata       rdata   003
+__Hbss         bss     03D  __Hcode        code    03D
+__Hconst       const   100  __Hdata        data    10F
+__Hheap        heap    03D  __Hidata       idata   03D
+__Hirdata      irdata  03D  __Hnvram       nvram   03D
+__Hrbit        rbit    000  __Hrbss        rbss    03D
+__Hrdata       rdata   03D  __Hstrings     strings 100
+__Htext        text    03D  __Hvectors     vectors 003
+__Lbss         bss     03D  __Lcode        code    03D
+__Lconst       const   100  __Ldata        data    100
+__Lheap        heap    03D  __Lidata       idata   03D
+__Lirdata      irdata  03D  __Lnvram       nvram   03D
+__Lrbit        rbit    000  __Lrbss        rbss    020
+__Lrdata       rdata   03D  __Lstrings     strings 100
+__Ltext        text    03D  __Lvectors     vectors 000
+__S0           (abs)   475  _exit          text    0F2
+_main          text    10F  awdiv          text    093
+awmod          text    08B  awmul          text    0C3
+intlevel0      (abs)   000  intlevel1      (abs)   000
+lwdiv          text    058  lwmod          text    064
+lwmul          text    0C3  powerup        text    0F5
+small_model    (abs)   001  stack_internal (abs)   001
+start          vectors 000  start1         text    0E1
+str_copy       text    44A  str_load       text    44A
+str_xcopy      text    434  strx_copy      text    44A
+strx_load      text    44A  strx_xcopy     text    434
